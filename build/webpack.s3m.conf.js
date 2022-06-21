@@ -16,14 +16,14 @@ module.exports = env => {
   let plugins = [...common.plugins]
   if (IS_PROD) {
     plugins.push(new webpack.NoEmitOnErrorsPlugin())
-    plugins.push(
-      new JavaScriptObfuscator(
-        {
-          rotateStringArray: true
-        },
-        []
-      )
-    )
+    // plugins.push(
+    //   new JavaScriptObfuscator(
+    //     {
+    //       rotateStringArray: true
+    //     },
+    //     []
+    //   )
+    // )
   }
   return {
     entry: {
